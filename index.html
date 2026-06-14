@@ -1,439 +1,139 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" translate="no" class="notranslate">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate">
+  <meta name="robots" content="index,follow">
   <title>Jimmy Liu | Digital Business Card</title>
-  <meta name="description" content="Jimmy Liu digital business card for ESG, PCR polymer solutions, recycled plastics, RPVB, plastic additives, and Nylon 56.">
   <style>
-    :root {
-      --ink: #10202f;
-      --muted: #61707d;
-      --line: #d8e1e8;
-      --paper: #f7fafb;
-      --navy: #123452;
-      --green: #17a673;
-      --shadow: 0 22px 60px rgba(18, 52, 82, .16);
-    }
-
     * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--ink);
-      font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-      background: linear-gradient(130deg, rgba(37, 168, 216, .14), transparent 35%),
-        linear-gradient(155deg, transparent 55%, rgba(23, 166, 115, .13)), var(--paper);
-    }
-
+    html, body { margin: 0; min-height: 100%; }
+    body { font-family: Arial, "Noto Sans TC", "PingFang TC", sans-serif; background: #f6fafb; color: #142435; -webkit-text-size-adjust: 100%; }
     a { color: inherit; text-decoration: none; }
-
-    .page {
-      width: min(1120px, 100%);
-      margin: 0 auto;
-      padding: 28px 18px 40px;
-    }
-
-    .card {
-      overflow: hidden;
-      border: 1px solid rgba(216, 225, 232, .95);
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) 360px;
-      min-height: 520px;
-      color: #fff;
-      background: linear-gradient(128deg, rgba(18, 52, 82, .98), rgba(18, 52, 82, .88));
-    }
-
-    .hero-main {
-      padding: 44px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 34px;
-    }
-
-    .brand-logo {
-      display: block;
-      width: min(430px, 100%);
-      height: auto;
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 12px 26px rgba(0, 0, 0, .18);
-    }
-
-    .company {
-      margin-top: 10px;
-      color: rgba(255, 255, 255, .76);
-      font-size: 14px;
-      line-height: 1.45;
-    }
-
-    .identity h1 {
-      margin: 0;
-      font-size: clamp(44px, 7vw, 78px);
-      line-height: .95;
-      font-weight: 800;
-    }
-
-    .english {
-      margin-top: 12px;
-      color: rgba(255, 255, 255, .84);
-      font-size: 28px;
-      font-weight: 700;
-    }
-
-    .role {
-      display: inline-flex;
-      width: fit-content;
-      margin-top: 22px;
-      padding: 9px 14px;
-      border: 1px solid rgba(255, 255, 255, .22);
-      border-radius: 8px;
-      color: rgba(255, 255, 255, .88);
-      background: rgba(255, 255, 255, .08);
-      font-size: 15px;
-    }
-
-    .value-line {
-      max-width: 680px;
-      color: rgba(255, 255, 255, .8);
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
-    .contact-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .contact-mini {
-      min-height: 74px;
-      padding: 13px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .09);
-      border: 1px solid rgba(255, 255, 255, .14);
-    }
-
-    .label {
-      display: block;
-      color: rgba(255, 255, 255, .58);
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-
-    .contact-mini strong {
-      display: block;
-      margin-top: 6px;
-      color: #fff;
-      font-size: 14px;
-      line-height: 1.35;
-      word-break: break-word;
-    }
-
-    .qr-panel {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 16px;
-      color: var(--ink);
-      background: #f8fbfc;
-    }
-
-    .qr-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .qr-box {
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-      text-align: center;
-    }
-
-    .qr-box img {
-      display: block;
-      width: 100%;
-      max-width: 210px;
-      aspect-ratio: 1;
-      object-fit: contain;
-      margin: 0 auto;
-    }
-
-    .scan {
-      margin: 12px 0 0;
-      font-weight: 700;
-      line-height: 1.45;
-    }
-
-    .scan small {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-weight: 400;
-    }
-
-    .actions {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 14px;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: #fff;
-      font-weight: 700;
-    }
-
-    .button.primary {
-      color: #fff;
-      border-color: var(--green);
-      background: var(--green);
-    }
-
-    .section {
-      padding: 38px 44px;
-      border-top: 1px solid var(--line);
-    }
-
-    .section h2 {
-      margin: 0 0 18px;
-      color: var(--navy);
-      font-size: 24px;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .copy {
-      color: #354656;
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    .copy strong { color: var(--ink); }
-
-    .solutions {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .solution {
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .solution h3 {
-      margin: 0 0 10px;
-      font-size: 19px;
-      color: var(--navy);
-    }
-
-    .solution p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .chip {
-      padding: 9px 12px;
-      border-radius: 8px;
-      background: #edf5f3;
-      color: #17664f;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .details {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px 22px;
-      margin-top: 22px;
-      color: #354656;
-    }
-
-    .detail {
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-      line-height: 1.55;
-      word-break: break-word;
-    }
-
-    .detail span {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    @media (max-width: 860px) {
-      .page { padding: 0; }
-      .card { border-radius: 0; border-left: 0; border-right: 0; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-main, .section { padding: 30px 22px; }
-      .contact-strip, .intro-grid, .solutions, .details { grid-template-columns: 1fr; }
-      .qr-panel { padding: 22px; }
-      .identity h1 { font-size: 52px; }
+    .notranslate { translate: no; }
+    .wrap { max-width: 980px; margin: 0 auto; background: #fff; box-shadow: 0 20px 60px rgba(18,52,82,.14); }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) 340px; background: #123452; color: #fff; }
+    .main { padding: 34px; }
+    .logoBox { width: min(420px, 100%); padding: 18px 20px; border-radius: 8px; background: #fff; box-shadow: 0 12px 26px rgba(0,0,0,.20); }
+    .logo { display: block; width: 100%; height: auto; }
+    .company { margin-top: 16px; color: rgba(255,255,255,.82); font-size: 18px; line-height: 1.55; }
+    h1 { margin: 38px 0 8px; font-size: clamp(46px, 8vw, 68px); line-height: 1; letter-spacing: 0; }
+    .en { font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: rgba(255,255,255,.90); line-height: 1.15; }
+    .role { display: inline-block; margin: 18px 0 22px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.26); border-radius: 8px; background: rgba(255,255,255,.10); font-weight: 700; }
+    .value { max-width: 680px; margin: 0; font-size: 18px; line-height: 1.7; color: rgba(255,255,255,.86); }
+    .contacts { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 28px; }
+    .contact { min-width: 0; padding: 13px; border: 1px solid rgba(255,255,255,.18); border-radius: 8px; background: rgba(255,255,255,.10); }
+    .contact span { display: block; color: rgba(255,255,255,.70); font-size: 12px; text-transform: uppercase; }
+    .contact b { display: block; margin-top: 6px; overflow-wrap: anywhere; font-size: 15px; }
+    .side { padding: 22px; background: #f8fbfc; color: #142435; }
+    .qr { padding: 16px; margin-bottom: 14px; border: 1px solid #d9e2e8; border-radius: 8px; background: #fff; text-align: center; }
+    .qr img { display: block; width: min(230px, 100%); height: auto; margin: 0 auto; image-rendering: pixelated; }
+    .qr b { display: block; margin-top: 12px; font-size: 18px; }
+    .qr small { display: block; margin-top: 4px; color: #61707d; font-size: 14px; line-height: 1.45; }
+    .actions { display: grid; gap: 10px; }
+    .btn { display: block; width: 100%; text-align: center; padding: 12px 14px; border: 1px solid #d9e2e8; border-radius: 8px; background: #fff; font-weight: 700; }
+    .primary { background: #17a673; color: #fff; border-color: #17a673; }
+    section { padding: 34px; border-top: 1px solid #d9e2e8; }
+    h2 { margin: 0 0 18px; color: #123452; font-size: clamp(30px, 5.5vw, 44px); line-height: 1.15; letter-spacing: 0; }
+    h3 { margin: 0 0 8px; color: #123452; font-size: 22px; }
+    p { margin: 0 0 18px; line-height: 1.78; font-size: 18px; color: #3f4d5b; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+    .card { border: 1px solid #d9e2e8; border-radius: 8px; padding: 18px; background: #fbfdfd; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 22px; }
+    .chip { padding: 10px 12px; background: #edf6f3; color: #17664f; border-radius: 8px; font-weight: 700; }
+    .info { display: grid; grid-template-columns: 150px 1fr; gap: 12px; padding: 13px 0; border-top: 1px solid #e2e8ed; font-size: 18px; }
+    .info:first-child { border-top: 0; }
+    .label { color: #6a7783; font-weight: 700; }
+    .data { color: #344252; overflow-wrap: anywhere; }
+    @media (max-width: 800px) {
+      .wrap { box-shadow: none; }
+      .hero, .contacts, .grid, .cards { grid-template-columns: 1fr; }
+      .main, section { padding: 28px 22px; }
+      .side { padding: 22px; }
+      .company { font-size: 16px; }
+      .contact b { font-size: 16px; }
+      .info { grid-template-columns: 1fr; gap: 4px; }
     }
   </style>
 </head>
-<body>
-  <main class="page">
-    <article class="card">
-      <section class="hero" aria-label="Digital business card">
-        <div class="hero-main">
-          <div>
-            <img class="brand-logo" src="assets/innonyx-logo-main.png" alt="Innonyx logo">
-            <div class="company">尹諾士國際股份有限公司 | Innonyx International Co., Ltd.</div>
-          </div>
-
-          <div class="identity">
-            <h1>劉建良</h1>
-            <div class="english">Jimmy Liu</div>
-            <div class="role">總經理 / General Manager</div>
-          </div>
-
-          <p class="value-line">
-            ESG / PCR polymer solution know-how provider for recycled plastics,
-            RPVB, plastic additives, and Nylon 56 applications.
-          </p>
-
-          <div class="contact-strip" aria-label="Key contact information">
-            <a class="contact-mini" href="mailto:jimmy.liu816@gmail.com">
-              <span class="label">Email</span>
-              <strong>jimmy.liu816@gmail.com</strong>
-            </a>
-            <a class="contact-mini" href="tel:+886935695422">
-              <span class="label">Mobile</span>
-              <strong>0935-695-422</strong>
-            </a>
-            <a class="contact-mini" href="https://www.innonyx.com">
-              <span class="label">Website</span>
-              <strong>www.innonyx.com</strong>
-            </a>
-          </div>
+<body translate="no" class="notranslate">
+  <main class="wrap notranslate" translate="no">
+    <section class="hero">
+      <div class="main">
+        <div class="logoBox"><img class="logo" src="data:image/jpeg;base64,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" alt="Innonyx International Co., Ltd. logo"></div>
+        <div class="company">尹諾士國際股份有限公司<br>Innonyx International Co., Ltd.</div>
+        <h1>劉建良</h1>
+        <div class="en">Jimmy Liu</div>
+        <div class="role">總經理 / General Manager</div>
+        <p class="value">ESG / PCR polymer solution know-how provider for RPVB, plastic additives, Nylon 56, and recycled plastics applications.</p>
+        <div class="contacts">
+          <a class="contact" href="mailto:jimmy.liu816@gmail.com"><span>Email</span><b>jimmy.liu816@gmail.com</b></a>
+          <a class="contact" href="tel:+886935695422"><span>Mobile</span><b>+886 935-695-422</b></a>
+          <a class="contact" href="https://www.innonyx.com"><span>Website</span><b>www.innonyx.com</b></a>
         </div>
-
-        <aside class="qr-panel" aria-label="QR Code and actions">
-          <div class="qr-grid">
-            <div class="qr-box">
-              <img src="assets/line-qr.jpg" alt="Jimmy Liu LINE QR Code">
-              <p class="scan">LINE<small>掃描加入 LINE / Scan to connect</small></p>
-            </div>
-            <div class="qr-box">
-              <img src="assets/wechat-qr.jpg" alt="Jimmy Liu WeChat QR Code">
-              <p class="scan">WeChat / 微信<small>掃描新增微信好友 / Scan to add WeChat</small></p>
-            </div>
-          </div>
-
-          <div class="actions">
-            <a class="button primary" href="assets/line-qr.jpg">Add LINE</a>
-            <a class="button" href="assets/wechat-qr.jpg">Add WeChat</a>
-            <a class="button" href="mailto:jimmy.liu816@gmail.com">Email Me</a>
-            <a class="button" href="tel:+886226973068">Call Office</a>
-            <a class="button" href="tel:+886935695422">Call Mobile</a>
-            <a class="button" href="https://www.innonyx.com">Visit Website</a>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section">
-        <h2>Profile | 個人簡介</h2>
-        <div class="intro-grid">
-          <p class="copy">
-            我專注於 <strong>ESG、PCR polymer solution</strong> 與塑膠回收再利用材料應用，協助
-            Masterbatch Maker、回收塑膠再利用業者與品牌商，針對材料選用、添加劑應用、
-            回收料升級與產品開發提供專業解決方案。
-          </p>
-          <p class="copy">
-            I specialize in ESG-driven PCR polymer solutions and recycled plastic material
-            applications, supporting masterbatch makers, plastic recycling companies, and
-            brand owners with material selection, additive solutions, recycled material
-            upgrading, and product development know-how.
-          </p>
+      </div>
+      <aside class="side">
+        <div class="qr">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQAAAAAVtjufAAAE8klEQVR42sWYz4ocVRTGf/dWTbqSCVYhamYj3eBG3OjClQlTlTfIMoKQPIILF0ETu8K4FMwjTMAHyMatc2f0AQyIIIjcySrBwNwGk7kzc7uOi6pOV3VX588YsTYNp0+fW+c73znfua2Evmei6X9em32qlFK3Rt/A3lE8iSfxvlIqRgcA40oQX4HDAlUTp3j2+4zRKd8nF3EwVUdjSG8NQUQM/3m+UAagpLQWOIYKBxq5fQYYy3d3PwIO4URtgEYtB0lO+z76Pvt8wCeTne2OXWWl5W1iiiuNPW4+y30EwC3HV4DJunZXggDFgn9WEjr+TfwUnhSyx89p2D8lnj3E9TVuGgELJ4YKT9zgJoFKqWvwtOQrdZ5I3FJ8s+Lc4vR131UqI43uwgUDKSilirn/CEn646gV8WXZblr+traviYgU/JCzi1xYu//FhyJyDCIiEtIw9KQm3XIiIiLudfE8BqUOvgXWZZKl0yzEA6/UQV0v02IYQZjxvOiEUC+su5kbyiZOpcAVGeAsh1DWcfC5VKlIGA4Mm5AGRGS3m2+1Ii/94nyZmrRi7GBw8Msm6lp4Z2C46LTGg3FANgK9zdkAMRoSKLIuZHX8agXOC2eHub9xEGY/rIH1eWrSMhXxuew6uDkUSXvqW67Iq1zRX02D61gdGg+Y+E9w8NnIKx9AxMHYMRQjFZGLJBKnls51rXzbT7Ya59DiuVuMg0dESiIDaeASYysyaNV3NBCnKSgt0pmfSdMxI7p8yxoQLOLb9lHN03KESgCPj5waH9oxpPbmuYAYLroYfIWu0fKw1pRGt8kW+ngV+nlo5zN4nu+Wi+TGoFKWNCAVz3B2wIZqDRA9T2o0axtZweeWvwOKRmLr94kxJWRI6X+sY5QC6MhcNpOQHml4QCoPtuS2XpirV/r5Ft7ot5/XtmPfuXwhnkQFBiYlSunp+jEaiiLBldtYDAZY03E81x2Lo6To8geAv2Wh7wBXjph+udz6WWnBt3SQmt4SuEGh3M00MKjIOzw3y3jWx+n6K+n0u4a4HoCN/z1NxWMUJO5eeAx/1farSk7UBkbE2V+fbAz5rbYn87lvenjl5mB27L6jJLpOEzjS7LX67mj8SKmYsUQ7GVxKYVq06lsS41foY7JaL3p1th0HDx+fKdcjOzg42L1OGu3I9GTLaeDcWWIsWcYdoEDHm3M8Ry+cn8+f535zUBHZsfWQu1xEgNzpuuuzcmkfEN+fl0qqei9a9Ec3vOq+j/JPqe5dHQGhVUifO9JAJD53SrZExJOu0Gu/Iq/kefnmA7Ffb0c2MmfK9A+ACy53GknIdq9gY842k+D9uV67PpyBjKW8xIOBUVjMN4HCYWPaAM72k1pQUpFIPIt6/W/28AqgrACug1Q4CHsN+3MXiVSQBiLjcbO+Llr71aveO+wK+6h7HxklDMJkyzKEbK+jC4le2rdn46t4lf5a8Fcx0+FDJgU/2dvvTlXCnZqfFfBWU07dANV7H3k5HDoNMtv+orvrARCm7/2eZHlrH45fLb5dYe/nJ+Z6ALD+se/sIZfNE6VU9v2jjUeRpKZ3P5Hn9pes0FM1PkbfH1fJm6jPPx0+JNlt9lJxYydCjpKQBiLT7WthWae69wLf0esWYdr3r1YcT8PzsYDHbZK7yIpZ0K+Xv++Y2Upj3IznDS1LYpVoitk9Xf1P/zP8A37jPWgvL+yLAAAAAElFTkSuQmCC" alt="Jimmy Liu LINE QR Code">
+          <b>LINE QR Code</b>
+          <small>掃描加入 LINE / Scan to connect on LINE</small>
         </div>
-      </section>
-
-      <section class="section">
-        <h2>Company | 公司介紹</h2>
-        <div class="intro-grid">
-          <p class="copy">
-            尹諾士國際股份有限公司專注於塑膠材料、回收材料應用與永續材料解決方案，
-            協助客戶在 ESG、PCR、再生塑膠與高機能材料領域提升產品價值與市場競爭力。
-          </p>
-          <p class="copy">
-            Innonyx International Co., Ltd. focuses on polymer materials, recycled material
-            applications, and sustainable material solutions. We help customers enhance product
-            value and market competitiveness through technical know-how and customized solutions.
-          </p>
+        <div class="qr">
+          <img src="data:image/png;base64,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" alt="Jimmy Liu WeChat QR Code">
+          <b>WeChat QR Code</b>
+          <small>掃描新增微信好友 / Scan to add on WeChat</small>
         </div>
-      </section>
-
-      <section class="section">
-        <h2>Products & Solutions</h2>
-        <div class="solutions">
-          <div class="solution">
-            <h3>RPVB</h3>
-            <p>Recycled PVB material solution for sustainable product development and recycled material reuse.</p>
-          </div>
-          <div class="solution">
-            <h3>Plastic Additive</h3>
-            <p>塑膠添加劑解決方案，協助改善材料性能、加工性與產品穩定性。</p>
-          </div>
-          <div class="solution">
-            <h3>Nylon 56</h3>
-            <p>Bio-based / sustainable nylon solution for high-performance and sustainable material applications.</p>
-          </div>
+        <div class="actions">
+          <a class="btn primary" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQAAAAAVtjufAAAE8klEQVR42sWYz4ocVRTGf/dWTbqSCVYhamYj3eBG3OjClQlTlTfIMoKQPIILF0ETu8K4FMwjTMAHyMatc2f0AQyIIIjcySrBwNwGk7kzc7uOi6pOV3VX588YsTYNp0+fW+c73znfua2Evmei6X9em32qlFK3Rt/A3lE8iSfxvlIqRgcA40oQX4HDAlUTp3j2+4zRKd8nF3EwVUdjSG8NQUQM/3m+UAagpLQWOIYKBxq5fQYYy3d3PwIO4URtgEYtB0lO+z76Pvt8wCeTne2OXWWl5W1iiiuNPW4+y30EwC3HV4DJunZXggDFgn9WEjr+TfwUnhSyx89p2D8lnj3E9TVuGgELJ4YKT9zgJoFKqWvwtOQrdZ5I3FJ8s+Lc4vR131UqI43uwgUDKSilirn/CEn646gV8WXZblr+traviYgU/JCzi1xYu//FhyJyDCIiEtIw9KQm3XIiIiLudfE8BqUOvgXWZZKl0yzEA6/UQV0v02IYQZjxvOiEUC+su5kbyiZOpcAVGeAsh1DWcfC5VKlIGA4Mm5AGRGS3m2+1Ii/94nyZmrRi7GBw8Msm6lp4Z2C46LTGg3FANgK9zdkAMRoSKLIuZHX8agXOC2eHub9xEGY/rIH1eWrSMhXxuew6uDkUSXvqW67Iq1zRX02D61gdGg+Y+E9w8NnIKx9AxMHYMRQjFZGLJBKnls51rXzbT7Ya59DiuVuMg0dESiIDaeASYysyaNV3NBCnKSgt0pmfSdMxI7p8yxoQLOLb9lHN03KESgCPj5waH9oxpPbmuYAYLroYfIWu0fKw1pRGt8kW+ngV+nlo5zN4nu+Wi+TGoFKWNCAVz3B2wIZqDRA9T2o0axtZweeWvwOKRmLr94kxJWRI6X+sY5QC6MhcNpOQHml4QCoPtuS2XpirV/r5Ft7ot5/XtmPfuXwhnkQFBiYlSunp+jEaiiLBldtYDAZY03E81x2Lo6To8geAv2Wh7wBXjph+udz6WWnBt3SQmt4SuEGh3M00MKjIOzw3y3jWx+n6K+n0u4a4HoCN/z1NxWMUJO5eeAx/1farSk7UBkbE2V+fbAz5rbYn87lvenjl5mB27L6jJLpOEzjS7LX67mj8SKmYsUQ7GVxKYVq06lsS41foY7JaL3p1th0HDx+fKdcjOzg42L1OGu3I9GTLaeDcWWIsWcYdoEDHm3M8Ry+cn8+f535zUBHZsfWQu1xEgNzpuuuzcmkfEN+fl0qqei9a9Ec3vOq+j/JPqe5dHQGhVUifO9JAJD53SrZExJOu0Gu/Iq/kefnmA7Ffb0c2MmfK9A+ACy53GknIdq9gY842k+D9uV67PpyBjKW8xIOBUVjMN4HCYWPaAM72k1pQUpFIPIt6/W/28AqgrACug1Q4CHsN+3MXiVSQBiLjcbO+Llr71aveO+wK+6h7HxklDMJkyzKEbK+jC4le2rdn46t4lf5a8Fcx0+FDJgU/2dvvTlXCnZqfFfBWU07dANV7H3k5HDoNMtv+orvrARCm7/2eZHlrH45fLb5dYe/nJ+Z6ALD+se/sIZfNE6VU9v2jjUeRpKZ3P5Hn9pes0FM1PkbfH1fJm6jPPx0+JNlt9lJxYydCjpKQBiLT7WthWae69wLf0esWYdr3r1YcT8PzsYDHbZK7yIpZ0K+Xv++Y2Upj3IznDS1LYpVoitk9Xf1P/zP8A37jPWgvL+yLAAAAAElFTkSuQmCC" download="jimmy-liu-line-qr.png">Download LINE QR</a>
+          <a class="btn" href="data:image/png;base64,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" download="jimmy-liu-wechat-qr.png">Download WeChat QR</a>
+          <a class="btn" href="mailto:jimmy.liu816@gmail.com">Email Jimmy Liu</a>
+          <a class="btn" href="tel:+886935695422">Call Mobile</a>
         </div>
-      </section>
+      </aside>
+    </section>
 
-      <section class="section">
-        <h2>Target Customers | 主要客戶</h2>
-        <div class="chips">
-          <span class="chip">Masterbatch Maker</span>
-          <span class="chip">回收塑膠再利用業者</span>
-          <span class="chip">Brand Owners</span>
-          <span class="chip">塑膠加工與材料應用廠商</span>
-          <span class="chip">ESG & PCR Project Teams</span>
-        </div>
+    <section>
+      <h2>Profile | 個人簡介</h2>
+      <div class="grid">
+        <p>我專注於 ESG / PCR 聚合物解決方案與再生塑膠材料應用，協助 Masterbatch Maker、回收塑膠再利用業者與品牌商，在材料選擇、添加劑應用、回收料升級與產品開發上提供專業 know-how。</p>
+        <p>I specialize in ESG-driven PCR polymer solutions and recycled plastic material applications, supporting masterbatch makers, plastic recycling companies, and brand owners with material selection, additive solutions, recycled material upgrading, and product development know-how.</p>
+      </div>
+    </section>
 
-        <div class="details">
-          <div class="detail"><span>Office</span>02-26973068 #200</div>
-          <div class="detail"><span>Fax</span>02-26973069</div>
-          <div class="detail"><span>Address</span>新北市汐止區新台五路一段97號28樓之11</div>
-          <div class="detail"><span>Tax ID</span>66802966</div>
-        </div>
-      </section>
-    </article>
+    <section>
+      <h2>Company | 公司介紹</h2>
+      <div class="grid">
+        <p>尹諾士國際股份有限公司專注於高分子材料、再生材料應用與永續材料解決方案，協助客戶在 ESG、PCR、再生塑膠與高功能材料領域提升產品價值與市場競爭力。</p>
+        <p>Innonyx International Co., Ltd. focuses on polymer materials, recycled material applications, and sustainable material solutions, helping customers improve product value and competitiveness in ESG, PCR, recycled plastics, and high-performance material applications.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Products & Solutions</h2>
+      <div class="cards">
+        <div class="card"><h3>RPVB</h3><p>Recycled PVB material solution for sustainable product development.</p></div>
+        <div class="card"><h3>Plastic Additive</h3><p>塑膠添加劑解決方案，協助改善材料性能、加工性與產品穩定性。</p></div>
+        <div class="card"><h3>Nylon 56</h3><p>Bio-based / sustainable nylon solution for high-performance applications.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Target Customers | 主要客戶</h2>
+      <div class="chips">
+        <span class="chip">Masterbatch Maker</span>
+        <span class="chip">回收塑膠再利用業者</span>
+        <span class="chip">Brand Owners</span>
+        <span class="chip">ESG / PCR Project Teams</span>
+      </div>
+      <div class="info"><div class="label">Email</div><div class="data">jimmy.liu816@gmail.com</div></div>
+      <div class="info"><div class="label">Mobile</div><div class="data">+886 935-695-422</div></div>
+      <div class="info"><div class="label">Office</div><div class="data">02-26973068 #200</div></div>
+      <div class="info"><div class="label">Fax</div><div class="data">02-26973069</div></div>
+      <div class="info"><div class="label">Address</div><div class="data">新北市汐止區新台五路一段97號28樓之11</div></div>
+      <div class="info"><div class="label">Tax ID</div><div class="data">66802966</div></div>
+    </section>
   </main>
 </body>
 </html>
